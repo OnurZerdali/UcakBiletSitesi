@@ -12,6 +12,5 @@ public class BaglantiSinifi
         SqlConnection baglan = new SqlConnection(@"Data Source=DESKTOP-N8D3198;Initial Catalog=UcakBileti;Integrated Security=True");
         baglan.Open();
         return baglan;
-        baglan.Close();
     }
 }

@@ -84,6 +84,7 @@ public partial class Galeri : System.Web.UI.Page
         {
             lblhakkinda4.Text = dorduncuhk["sehirHakkinda"].ToString();
         }
+        bgl.baglanti().Close();
     }
 
     protected void altbtnBiletAl_Click(object sender, EventArgs e)

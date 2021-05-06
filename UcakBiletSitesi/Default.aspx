@@ -20,11 +20,20 @@
         body {
             background-color: #F0F0F0;
         }
+
         .auto-style1 {
             margin-bottom: 0;
             margin-left: 150;
         }
-        </style>
+        .auto-style2 {
+            position: absolute;
+            left: 5%;
+            top: 200%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            height: 153px;
+        }
+    </style>
 
 </head>
 
@@ -35,16 +44,13 @@
             <div class="section">
                 <div class="content-title">
                     <div class="left-top" style="background-color: #2B2A30">
-                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                        <a href="#">SOSYAL MEDYADA BİZ</a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href=""></a>
                     </div>
                     <div class="right-top" style="background-color: #2B2A30">
                         <a href="#"><i class="far fa-user"></i></a>
-                        <a href="">BİZİMLE İLETİŞİME GEÇ</a>
+                        <a href="iletisim.aspx">BİZİMLE İLETİŞİME GEÇ</a>
                         <a href="">|</a>
-                        <a href="">0123 456 78 90</a>
+                        <a href="tel:01234567890">0123 456 78 90</a>
                     </div>
                 </div>
             </div>
@@ -63,33 +69,36 @@
                     <i class="fas fa-bars"></i>
                 </a>
 
-                <div class="display">
+                <div class="display" style="background-color: #2B2A30">
 
-                    <b><a href="#" class="" style="color: black">ANASAYFA</a></b>
-                    <b><a href="#" class="" style="color: black">BİLET AL</a></b>
-                    <b><a href="#" class="" style="color: black">GALERİ</a></b>
-                    <b><a href="#" class="" style="color: black">HAKKIMIZDA</a></b>
-                    <b><a href="#" class="" style="color: black">İLETİŞİM</a></b>
+                    <b><a href="Default.aspx" class="" style="color: white">ANASAYFA</a></b>
+                    <b><a href="BiletAl.aspx" class="" style="color: white">BİLET AL</a></b>
+                    <b><a href="Galeri.aspx" class="" style="color: white">GALERİ</a></b>
+                    <b><a href="Hakkimizda.aspx" class="" style="color: white">HAKKIMIZDA</a></b>
+                    <b><a href="iletisim.aspx" class="" style="color: white">İLETİŞİM</a></b>
+
+                       
 
                 </div>
             </div>
         </div>
 
+
         <div class="background">
             <div class="container">
-                <div class="header-box">
-                    <div class="" style="margin-top:15rem;">                   
-                       <h1><b style="color: white; margin-left:60rem;" >Kaliteli ve güvenli uçuşun tek adresi Do Turizm...</b></h1>
-                        <h1><b style="color: white; margin-left:60rem;" >
-                        <asp:Button ID="Button1" runat="server" Text="Hemen tıkla ve bilet al." BackColor="#55463F" BorderStyle="Solid" CssClass="auto-style1" Font-Bold="True" Font-Italic="True" Font-Size="50px" Height="107px" OnClick="Button1_Click" Width="623px" />
-                            </b></h1>
-                    </div>
+                <div class="auto-style2" style="margin-top:-95rem; margin-left:35rem;">
+                    <asp:Label ID="slogan" runat="server" Text="Do Turizm ile güvenli ve kaliteli yolcuklara yelken açın..." Font-Bold="True" Font-Size="20pt" ForeColor="#999999"></asp:Label>
                 </div>
+                <div class="auto-style2" style="margin-top:-90rem; margin-left:35rem;">
+                    <asp:Button class="" style="background-color:#999999;" ID="Button1" runat="server" Text="Hemen Bilet Al" 
+                        Font-Bold="True" Font-Italic="True" Font-Size="25px" 
+                        OnClick="Button1_Click" Height="75px" Width="400px" ForeColor="#733900" />
+                </div>
+                
 
-               <%--<div class="img-box">
+                <%--<div class="img-box">
                     <img src="img/logo2.png" alt="">
                 </div>--%>
-
             </div>
         </div>
 
@@ -129,25 +138,29 @@
             <div class="content-view">
                 <div class="content-number-box" style="color: #ffffff">
                     <div class="number-box">
-                        <p class=""> <img src="img/ucak3.png" alt="" style="width: 50px"></p>
+                        <p class="">
+                            <img src="img/ucak3.png" alt="" style="width: 50px"></p>
                         <asp:Label ID="lblucak" runat="server" Text="" Font-Size="25pt"></asp:Label>
                         <p class="textt">UÇAK</p>
                     </div>
 
                     <div class="number-box">
-                        <p class=""> <img src="img/basariliucus.png" alt="" style="width: 50px"></p>
+                        <p class="">
+                            <img src="img/basariliucus.png" alt="" style="width: 50px"></p>
                         <asp:Label ID="lblucus" runat="server" Text="" Font-Size="25pt"></asp:Label>
                         <p class="textt">UÇUŞ SAYISI</p>
                     </div>
 
                     <div class="number-box" style="color: #ffffff">
-                        <p class=""> <img src="img/koltuk.png" alt="" style="width: 50px"></p>
+                        <p class="">
+                            <img src="img/koltuk.png" alt="" style="width: 50px"></p>
                         <asp:Label ID="lblkapasite" runat="server" Text="" Font-Size="25pt"></asp:Label>
                         <p class="textt">YOLCU KAPASİTESİ</p>
                     </div>
 
                     <div class="number-box" style="color: #ffffff">
-                        <p class=""> <img src="img/mutlumusteri.png" alt="" style="width: 50px"></p>
+                        <p class="">
+                            <img src="img/mutlumusteri.png" alt="" style="width: 50px"></p>
                         <asp:Label ID="lblyolcu" runat="server" Text="" Font-Size="25pt"></asp:Label>
                         <p class="textt">MUTLU MÜŞTERİ</p>
                     </div>
@@ -176,11 +189,11 @@
             <div class="footer">
                 <div class="content-footer" style="background-color: #161729">
                     <div class="label">
-                        <a href="#">Anasayfa</a>
-                        <a href="#">Bilet al</a>
-                        <a href="#">Hakkımızda</a>
-                        <a href="#">Galeri</a>
-                        <a href="#">İletişim</a>
+                        <a href="Default.aspx">Anasayfa</a>
+                        <a href="BiletAl.aspx">Bilet al</a>
+                        <a href="Hakkimizda.aspx">Hakkımızda</a>
+                        <a href="Galeri.aspx">Galeri</a>
+                        <a href="iletisim.aspx">İletişim</a>
                     </div>
                     <div class="text-footer">
                         <a href="#">©2021 Do Turizm - Her Hakkı Saklıdır.</a>

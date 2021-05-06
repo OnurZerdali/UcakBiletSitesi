@@ -35,6 +35,7 @@ public partial class _Default : System.Web.UI.Page
         {
             lblyolcu.Text = yolcu["MusteriSayisi"].ToString();
         }
+        bgl.baglanti().Close();
     }
     
 

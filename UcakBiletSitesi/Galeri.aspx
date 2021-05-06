@@ -31,16 +31,13 @@
             <div class="section">
                 <div class="content-title">
                     <div class="left-top" style="background-color: #2B2A30">
-                        <a href="#"><i class="fas fa-share-alt"></i></a>
-                        <a href="#">SOSYAL MEDYADA BİZ</a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href=""></a>
                     </div>
                     <div class="right-top" style="background-color: #2B2A30">
                         <a href="#"><i class="far fa-user"></i></a>
-                        <a href="">BİZİMLE İLETİŞİME GEÇ</a>
+                        <a href="iletisim.aspx">BİZİMLE İLETİŞİME GEÇ</a>
                         <a href="">|</a>
-                        <a href="">0123 456 78 90</a>
+                        <a href="tel:01234567890">0123 456 78 90</a>
                     </div>
                 </div>
             </div>
@@ -61,28 +58,26 @@
 
                 <div class="display" style="background-color: #2B2A30">
 
-                    <b><a href="#" class="" style="color: white">ANASAYFA</a></b>
-                    <b><a href="#" class="" style="color: white">BİLET AL</a></b>
-                    <b><a href="#" class="" style="color: white">GALERİ</a></b>
-                    <b><a href="#" class="" style="color: white">HAKKIMIZDA</a></b>
-                    <b><a href="#" class="" style="color: white">İLETİŞİM</a></b>
+                    <b><a href="Default.aspx" class="" style="color: white">ANASAYFA</a></b>
+                    <b><a href="BiletAl.aspx" class="" style="color: white">BİLET AL</a></b>
+                    <b><a href="Galeri.aspx" class="" style="color: white">GALERİ</a></b>
+                    <b><a href="Hakkimizda.aspx" class="" style="color: white">HAKKIMIZDA</a></b>
+                    <b><a href="iletisim.aspx" class="" style="color: white">İLETİŞİM</a></b>
 
                 </div>
             </div>
         </div>
 
-
-        </div>
-        <div class="" style="background-color: white">
+        <div class="" style="background-color: #2B2A30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="kart">
                             <div class="konteynir">
-                                <asp:Label ID="lblsehir1" runat="server" Text="Label" Font-Bold="True" Font-Size="25pt"></asp:Label>
+                                <asp:Label ID="lblsehir1" runat="server" Text="Label" Font-Bold="True" Font-Size="25pt" ForeColor="White"></asp:Label>
                             </div>
                             <div class="konteynir">
-                                <asp:Label ID="lblhakkinda1" runat="server" Text="123" Font-Size="15pt"></asp:Label>
+                                <asp:Label ID="lblhakkinda1" runat="server" Text="123" Font-Size="15pt" ForeColor="#999999"></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -93,12 +88,12 @@
                     </div>
                     <div class="col-md-3">
                         <div class="kart">
-                             <img src="imgsehirler/ist2.jpg" alt="Avatar" style="width: 100%">
+                            <img src="imgsehirler/ist2.jpg" alt="Avatar" style="width: 100%">
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="kart">
-                             <img src="imgsehirler/ist3.jpg" alt="Avatar" style="width: 100%">
+                            <img src="imgsehirler/ist3.jpg" alt="Avatar" style="width: 100%">
                         </div>
                     </div>
                 </div>
@@ -112,16 +107,16 @@
 
         </div>
 
-         <div class="" style="background-color: white">
+        <div class="" style="background-color: #2B2A30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="kart">
                             <div class="konteynir">
-                                <asp:Label ID="lblsehir2" runat="server" Text="Label" Font-Bold="True" Font-Size="25pt"></asp:Label>
+                                <asp:Label ID="lblsehir2" runat="server" Text="Label" Font-Bold="True" Font-Size="25pt" ForeColor="White"></asp:Label>
                             </div>
                             <div class="konteynir">
-                                <asp:Label ID="lblhakkinda2" runat="server" Text="asdasd" Font-Size="15pt"></asp:Label>
+                                <asp:Label ID="lblhakkinda2" runat="server" Text="asdasd" Font-Size="15pt" ForeColor="#999999"></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -137,7 +132,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="kart">
-                           <img src="imgsehirler/ank3.jpg" alt="Avatar" style="width: 100%">
+                            <img src="imgsehirler/ank3.jpg" alt="Avatar" style="width: 100%">
                         </div>
                     </div>
                 </div>
@@ -151,16 +146,16 @@
 
         </div>
 
-         <div class="" style="background-color: white">
+        <div class="" style="background-color: #2B2A30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="kart">
                             <div class="konteynir">
-                                <asp:Label ID="lblsehir3" runat="server" Text="Label" Font-Bold="True" Font-Size="25pt"></asp:Label>
+                                <asp:Label ID="lblsehir3" runat="server" Text="Label" Font-Bold="True" Font-Size="25pt" ForeColor="White"></asp:Label>
                             </div>
                             <div class="konteynir">
-                                <asp:Label ID="lblhakkinda3" runat="server" Text="asdasd" Font-Size="15pt"></asp:Label>
+                                <asp:Label ID="lblhakkinda3" runat="server" Text="asdasd" Font-Size="15pt" ForeColor="#999999"></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -189,16 +184,16 @@
 
         </div>
 
-         <div class="" style="background-color: white">
+        <div class="" style="background-color: #2B2A30">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
                         <div class="kart">
                             <div class="konteynir">
-                                <asp:Label ID="lblsehir4" runat="server" Text="Label" Font-Bold="True" Font-Size="25pt"></asp:Label>
+                                <asp:Label ID="lblsehir4" runat="server" Text="Label" Font-Bold="True" Font-Size="25pt" ForeColor="White"></asp:Label>
                             </div>
                             <div class="konteynir">
-                                <asp:Label ID="lblhakkinda4" runat="server" Text="asdasd" Font-Size="15pt"></asp:Label>
+                                <asp:Label ID="lblhakkinda4" runat="server" Text="asdasd" Font-Size="15pt" ForeColor="#999999"></asp:Label>
                             </div>
                         </div>
                     </div>
@@ -232,28 +227,32 @@
                 <div class="content-number-box" style="color: #ffffff">
                     <div class="number-box">
                         <p class="">
-                            <img src="img/ucak3.png" alt="" style="width: 50px"></p>
+                            <img src="img/ucak3.png" alt="" style="width: 50px">
+                        </p>
                         <asp:Label ID="lblucak" runat="server" Text="" Font-Size="25pt"></asp:Label>
                         <p class="textt">UÇAK</p>
                     </div>
 
                     <div class="number-box">
                         <p class="">
-                            <img src="img/basariliucus.png" alt="" style="width: 50px"></p>
+                            <img src="img/basariliucus.png" alt="" style="width: 50px">
+                        </p>
                         <asp:Label ID="lblucus" runat="server" Text="" Font-Size="25pt"></asp:Label>
                         <p class="textt">UÇUŞ SAYISI</p>
                     </div>
 
                     <div class="number-box" style="color: #ffffff">
                         <p class="">
-                            <img src="img/koltuk.png" alt="" style="width: 50px"></p>
+                            <img src="img/koltuk.png" alt="" style="width: 50px">
+                        </p>
                         <asp:Label ID="lblkapasite" runat="server" Text="" Font-Size="25pt"></asp:Label>
                         <p class="textt">YOLCU KAPASİTESİ</p>
                     </div>
 
                     <div class="number-box" style="color: #ffffff">
                         <p class="">
-                            <img src="img/mutlumusteri.png" alt="" style="width: 50px"></p>
+                            <img src="img/mutlumusteri.png" alt="" style="width: 50px">
+                        </p>
                         <asp:Label ID="lblyolcu" runat="server" Text="" Font-Size="25pt"></asp:Label>
                         <p class="textt">MUTLU MÜŞTERİ</p>
                     </div>
@@ -282,11 +281,11 @@
             <div class="footer">
                 <div class="content-footer" style="background-color: #161729">
                     <div class="label">
-                        <a href="#">Anasayfa</a>
-                        <a href="#">Bilet al</a>
-                        <a href="#">Hakkımızda</a>
-                        <a href="#">Galeri</a>
-                        <a href="#">İletişim</a>
+                        <a href="Default.aspx">Anasayfa</a>
+                        <a href="BiletAl.aspx">Bilet al</a>
+                        <a href="Hakkimizda.aspx">Hakkımızda</a>
+                        <a href="Galeri.aspx">Galeri</a>
+                        <a href="iletisim.aspx">İletişim</a>
                     </div>
                     <div class="text-footer">
                         <a href="#">©2021 Do Turizm - Her Hakkı Saklıdır.</a>
