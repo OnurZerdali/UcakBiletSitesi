@@ -24,7 +24,7 @@
             margin-bottom: 0;
             margin-left: 150;
         }
-    </style>
+        </style>
 
 </head>
 
@@ -107,7 +107,7 @@
                     <div class="kart">
                         <img src="img/guncellendiduyuru.jpg" alt="Avatar" style="width: 100%">
                         <div class="konteynir">
-                            <h4 class="text-center mt-3"><b>Uçuşlarımız güncellendi</b></h4>
+                            <h4 class="text-center mt-3"><b><a href="#" style="color: black">Uçuşlarımız güncellendi</a></b></h4>
                         </div>
                     </div>
                 </div>
@@ -165,8 +165,8 @@
                     <p class="big-p" style="color: #ffffff">Hemen Ara + 90 123 456 78 90</p>
                     <p class="small-p" style="color: #ffffff">Bilgi almak ve rezervasyon yaptırmak için hemen ara!</p>
                 </div>
-                <button class="button-contact">BİLET AL</button>
-                <button class="button-contact">İLETİŞİME GEÇ</button>
+                <asp:Button class="button-contact" ID="altbtnBiletAl" runat="server" Text="Bilet Al" Font-Bold="True" Font-Italic="True" Font-Size="15px" OnClick="altbtnBiletAl_Click" Height="50px" Width="240px" />
+                <asp:Button class="button-contact" ID="altiletisimegec" runat="server" Text="İletişime geç" Font-Bold="True" Font-Italic="True" Font-Size="15px" OnClick="altiletisimegec_Click" Height="50px" Width="240px" />
             </div>
         </div>
 

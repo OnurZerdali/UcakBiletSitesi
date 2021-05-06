@@ -36,9 +36,20 @@ public partial class _Default : System.Web.UI.Page
             lblyolcu.Text = yolcu["MusteriSayisi"].ToString();
         }
     }
+    
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+        Response.Redirect("BiletAl.aspx");
+    }
 
+    protected void altbtnBiletAl_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("BiletAl.aspx");
+    }
+
+    protected void altiletisimegec_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("iletisim.aspx");
     }
 }
