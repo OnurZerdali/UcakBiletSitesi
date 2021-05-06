@@ -1,0 +1,579 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #ded4d4;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    height: 4rem;
+}
+
+.content-title a,
+.content-links a,
+.content-footer a {
+    display: inline;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: 'Shippori Mincho', serif;
+    padding-right: 1.1rem;
+    letter-spacing: .1rem;
+}
+
+.left-top,
+.right-top {
+    float: left;
+    width: 50%;
+    padding: .9rem;
+}
+
+.left-top {
+    padding-left: 5rem;
+}
+
+.right-top {
+    text-align: right;
+    padding-right: 5rem;
+}
+
+.left-top a:first-child {
+    padding-right: .7rem;
+}
+
+/*logo*/
+.logo,
+background {
+    background-color: #F0F0F0;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.logo-box {
+    background-color: #F0F0F0;
+    width: 20%;
+    margin: auto;
+}
+
+    .logo-box img {
+        width: 100%;
+    }
+
+/*links*/
+
+.content-links {
+    text-align: center;
+}
+
+    .content-links a {
+        color: #484848;
+        display: inline-block;
+        margin: 2rem 0;
+        padding: 0 2.8rem;
+    }
+
+    .content-links .header-icon {
+        display: none;
+    }
+
+/*background*/
+.background,
+.content-view {
+    background: linear-gradient(rgba(28, 28, 28, 0.8) 0%, rgba(28, 28, 28, 0.6) 100%), url(img/ucakarkaplan.jpg);
+    width: 100%;
+    height: 55rem;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+/* arkafonun üstündeki resim*/
+.img-box {
+    float: left;
+    position: absolute;
+    right: 0;
+    top: 2.4rem;
+    width: 50%;
+    height: 90%;
+}
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: right;
+    }
+
+.header-box {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.content-header {
+    width: 45rem;
+    float: left;
+}
+
+.background p {
+    font-size: 4.4rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 4.5rem;
+}
+
+.anabuton {
+    color: black;
+    font-size: 2rem;
+    border: 1px solid black;
+    width: 100rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+    .anabuton a {
+        color: black;
+    }
+
+    .anabuton:hover {
+        color: black;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+
+
+/*yan yana 3 tane*/
+
+.img3 {
+    width: 100%;
+    margin: 0, 5rem;
+}
+
+.img-content {
+    display: flex;
+    align-items: center;
+}
+
+.imgbox {
+    width: 33%;
+    padding: 1rem;
+    float: left;
+}
+
+    .imgbox img,
+    .boxx img {
+        width: 100%;
+    }
+
+    .imgbox p {
+        position: relative;
+        bottom: 4rem;
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+/* aynı boyutta yan yana
+.imgbox img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+*/
+
+.content-p {
+    color: black;
+    font-size: 5rem;
+    text-align: center;
+    padding-bottom: 8rem;
+    padding-top: 8rem;
+}
+
+    .content-p p {
+        font-size: 3rem;
+        color: #a3a3a3;
+        padding-bottom: 3rem;
+    }
+
+    .content-p h3 {
+        font-weight: 200;
+    }
+
+
+/*yazı resim*/
+.text-picture {
+    margin-bottom: 7rem;
+}
+
+.boxx {
+    width: 30%;
+    float: left;
+}
+
+    .boxx img {
+        height: 35rem;
+        object-fit: contain;
+        padding: 1.5rem;
+    }
+
+.text-box {
+    width: 35%;
+    height: 35rem;
+    color: black;
+    font-size: 4rem;
+    line-height: 5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+button {
+    width: 25rem;
+    height: 5rem;
+    line-height: 2rem;
+    background-color: orange;
+    color: #fff;
+    border: none;
+}
+
+
+.button {
+    width: 100%;
+    height: 15rem;
+    display: inline-block;
+    padding: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 1rem;
+}
+
+/*manzara*/
+
+.content-view {
+    background-color: #3C2426 !important;
+    height: 30rem;
+    background-position: bottom;
+    background-size: cover;
+    margin-bottom: 7rem;
+}
+
+.content-number-box {
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+}
+
+.number-box {
+    float: left;
+    text-align: center;
+    margin: 5rem;
+}
+
+.number {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+}
+
+.textt {
+    font-size: 2rem;
+}
+
+
+/*iletişim kutusu*/
+
+.contact {
+    margin-bottom: 5rem;
+}
+
+.content-box {
+    width: 90%;
+    height: 20rem;
+    background-color: #3C2426;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 2rem;
+}
+
+.icon-box {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    margin: 2rem;
+}
+
+.text-p {
+    margin: auto;
+    margin-left: 0;
+}
+
+.big-p {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.small-p {
+    font-size: 1.7rem;
+}
+
+.button-contact {
+    display: inline-block;
+    margin: auto;
+    margin-right: 2rem;
+    background-color: #fff;
+    color: black;
+    border: none;
+}
+
+
+/*footer*/
+.footer {
+    height: 20rem;
+    background-color: #000000;
+}
+
+.content-footer {
+    padding: 2rem;
+}
+
+.label {
+    margin: 4rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.text-footer {
+    margin: 4rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.message-box {
+    position: fixed;
+    bottom: 0;
+    right: 0.5rem;
+    width: 20rem;
+    height: 5rem;
+    background-color: orange;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    z-index: 9;
+}
+
+
+@media (max-width:900px) {
+    header {
+        height: 8rem;
+    }
+
+    .content-title {
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .left-top,
+    .right-top {
+        float: inherit;
+        width: 100%;
+        padding: 0;
+    }
+
+    .left-top {
+        padding-bottom: 1rem;
+    }
+
+    .right-top {
+        text-align: center;
+    }
+}
+
+
+
+
+@media (max-width:770px) {
+
+    html {
+        font-size: 9px;
+    }
+
+    .left-top a:first-child,
+    .left-top a:nth-child(2),
+    hr {
+        display: none;
+    }
+
+
+
+    .links .content-links a:first-child {
+        font-size: 3rem;
+        color: #a3a3a3;
+    }
+
+
+
+    .links .content-links.responsive a:not(:first-child) {
+        display: none;
+    }
+
+    .links .content-links.responsive .display {
+        display: none;
+    }
+
+
+
+    .links .content-links a {
+        display: block;
+        color: white;
+    }
+
+    .display {
+        background-color: #29AE73;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+        height: 100%;
+        width: 30rem;
+    }
+
+        .display a {
+            color: azure;
+            text-align: left;
+            padding: 1rem;
+            margin-left: 2rem;
+            font-size: 2rem;
+        }
+
+    /*backgraund*/
+    .img-box {
+        height: 50%;
+        top: 15rem;
+    }
+
+    /*3resim*/
+    .img-content {
+        display: block;
+    }
+
+    .imgbox,
+    .content-p {
+        margin: auto;
+        width: 70%;
+        padding: 1rem;
+        float: inherit;
+        margin-bottom: 2rem;
+    }
+
+
+    .text-picture {
+        margin-bottom: 7rem;
+    }
+
+    .boxx {
+        width: 420px;
+        float: inherit;
+        margin: auto;
+    }
+
+        .boxx img {
+            width: 100%;
+            height: 100%;
+        }
+
+    .text-box {
+        width: 80%;
+        height: 30rem;
+        font-size: 3.9rem;
+        font-family: 'Shippori Mincho', serif;
+        line-height: 6rem;
+        text-align: center;
+        margin: auto;
+        margin-top: 9rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+    .activity-box {
+        width: 100%;
+        height: 22rem;
+    }
+
+
+    .content-view {
+        height: 70rem;
+        overflow: hidden;
+    }
+
+    .content-number-box {
+        display: block;
+    }
+
+    .number-box {
+        float: inherit;
+    }
+
+
+    /*content*/
+    .contact {
+        margin-bottom: 5rem;
+    }
+
+    .content-box {
+        width: 410px;
+        /*içerdeki yazıların oynamamasını istiyorsan px olarak değer ver*/
+        overflow: hidden;
+        height: 40rem;
+        display: block;
+        padding: 7.9rem;
+    }
+
+    .icon-box {
+        display: none;
+    }
+
+    .text-p {
+        margin-bottom: 5rem;
+    }
+
+    .button-contact {
+        display: block;
+        float: left;
+    }
+
+    .konteynir {
+        padding: 2px 16px;
+    }
+    /*KART*/
+    .kart {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
+
+        .kart:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    .konteynir {
+        padding: 2px 16px;
+    }
+}
