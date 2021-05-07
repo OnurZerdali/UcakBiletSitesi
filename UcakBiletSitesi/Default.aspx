@@ -124,7 +124,7 @@
                     <div class="kart">
                         <img src="img/ucuskuralları.jpg" alt="Avatar" style="width: 100%">
                         <div class="konteynir">
-                            <h4><b><a>Uçuş kuralları hakkında</a></b></h4>
+                            <h4><b><a href="#" style="color: black">Uçuş kuralları hakkında</a></b></h4>
                             <p></p>
                         </div>
                     </div>

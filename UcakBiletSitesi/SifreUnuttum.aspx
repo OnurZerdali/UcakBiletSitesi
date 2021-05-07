@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BiletAl.aspx.cs" Inherits="BiletAl" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SifreUnuttum.aspx.cs" Inherits="SifreUnuttum" %>
 
 <!DOCTYPE html>
 
@@ -75,74 +75,41 @@
         <div class="" style="background-color: #2B2A30">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="kart" style ="margin-left:10rem; margin-top:6rem;">
+                    <div class="col-md-12">
+                        <div class="" style="margin-left:35rem; margin-top:8rem;">
                             <div class="konteynir">
-                                <h1><b class="" style="color: white">KAYIT OL</b></h1>
+                                <h1><b class="" style="color: white">ŞİFRE SIFIRLA</b></h1>
                             </div>
                             &nbsp;<br />
                             <div class="konteynir">
-                                <asp:Label ID="Label1" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Adınız:  &nbsp;&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="kayitAd" runat="server"></asp:TextBox>
+                                <asp:Label ID="Label1" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Mail Adresiniz:&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="DenenenMail" runat="server"></asp:TextBox>
                             </div>
-                            &nbsp;<br />
+                             &nbsp;<br />
                             <div class="konteynir">
-                                <asp:Label ID="Label2" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Soyadınız:&emsp;&emsp;"></asp:Label><asp:TextBox ID="kayitSoyad" runat="server"></asp:TextBox>
+                                <asp:Label ID="Label2" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Kurtarma Kodunuz:&emsp;"></asp:Label><asp:TextBox ID="Kurtarmakod" runat="server"></asp:TextBox>
                             </div>
-                            &nbsp;<br />
+                             &nbsp;<br />
                             <div class="konteynir">
-                                <asp:Label ID="Label3" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Mail adresiniz:&nbsp;"></asp:Label><asp:TextBox placeholder="ornek@gmail.com" ID="kayitMail" runat="server"></asp:TextBox>
+                                <asp:Label ID="Label4" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Yeni Şifreniz:&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox placeholder="******" ID="YeniSifre" type="password" runat="server"></asp:TextBox>
                             </div>
-                            &nbsp;<br />
+                             &nbsp;<br />
                             <div class="konteynir">
-                                <asp:Label ID="Label4" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Şifreniz:&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox placeholder="******" ID="kayitSifre" type="password" runat="server"></asp:TextBox>
+                                <asp:Label ID="Label6" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Yeni Şifreniz tekrar:&emsp;"></asp:Label><asp:TextBox placeholder="******" ID="YeniSifreTekrar" type="password" runat="server"></asp:TextBox>
                             </div>
-                            &nbsp;<br />
-                            <div class="konteynir">
-                                <asp:Label ID="Label6" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Şifreniz tekrar: "></asp:Label><asp:TextBox placeholder="******" ID="kayitSifreTekrar" type="password" runat="server"></asp:TextBox>
-                            </div>
-                            &nbsp;<br />
+                             &nbsp;<br />
                             <div class="konteynir">
                                 <asp:Label ID="Label5" Font-Size="10pt" ForeColor="#999999" runat="server" Text="Tüm alanlar doldurulmak zorundadır."></asp:Label>
                             </div>
-                            &nbsp;<br />
-                            <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
-                                <asp:Button ID="KayitOl" runat="server" Text="Kayıt Ol !" Height="48px" Width="235px" OnClick="KayitOl_Click" />
+                            <div class="konteynir" style="margin-left: 1rem; margin-top: 1rem;">
+                                <asp:Button ID="SiteyeGeriDon" runat="server" Text="Giriş Sayfasına geri dön !" Height="48px" Width="235px" OnClick="SiteyeGit_Click"/> <asp:Button ID="SifreSifirla" runat="server" Text="Şifremi Sıfırla !" Height="48px" Width="235px" OnClick="SifreSifirla_Click"/>
                             </div>
-                            &nbsp;<br />
+                             &nbsp;<br />
                             <div class="konteynir">
                                 <asp:Label ID="lblMesaj" style="margin-left: 5rem; margin-top: 1rem;" Font-Size="20pt" ForeColor="#999999" runat="server" Text=""></asp:Label>
+                                &nbsp;<br />
+                                <asp:Button ID="SiteyeGit" style="margin-left: 5rem; margin-top: 1rem;" runat="server" Text="Giriş sayfasına git !" Height="48px" Width="235px" OnClick="SiteyeGit_Click"/>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="kart" style ="margin-left:10rem; margin-top:6rem;">
-                            <div class="konteynir">
-                                <h1><b class="" style="color: white">GİRİŞ YAP</b></h1>
-                            </div>
-                             &nbsp;<br />
-                            <div class="konteynir">
-                                <asp:Label ID="Label7" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Mail adresiniz: "></asp:Label><asp:TextBox ID="DenenenMail" runat="server"></asp:TextBox>
-                            </div>
-                             &nbsp;<br />
-                            <div class="konteynir">
-                                <asp:Label ID="Label8" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Şifreniz:&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="DenenenSifre" runat="server"></asp:TextBox>
-                            </div>
-                             &nbsp;<br />
-                            <div class="konteynir">
-                                <asp:Label ID="Label9" Font-Size="10pt" ForeColor="#999999" runat="server" Text="Tüm alanlar doldurulmak zorundadır."></asp:Label>
-                            </div>
-                             &nbsp;<br />
-                            <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
-                                <asp:Button ID="btnGirisYap" runat="server" Text="Giriş Yap" Height="48px" Width="235px" OnClick="btnGirisYap_Click" />
-                            </div>
-                             &nbsp;<br />
-                            <div class="konteynir">
-                                <h4><b><a href="SifreUnuttum.aspx" style="color: white; margin-left: 7rem; margin-top: 1rem;">Şifreni mi unuttun ?</a></b></h4>
-                            </div>
-                             &nbsp;<br />
-                            <div class="konteynir">
-                                <asp:Label ID="lblMesaj2" style="margin-left: 5rem; margin-top: 1rem;" Font-Size="20pt" ForeColor="#999999" runat="server" Text=""></asp:Label>
-                            </div>
+                                
                         </div>
                     </div>
                 </div>

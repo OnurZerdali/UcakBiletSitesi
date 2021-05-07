@@ -35,6 +35,7 @@ public partial class BiletAl : System.Web.UI.Page
         {
             lblyolcu.Text = yolcu["MusteriSayisi"].ToString();
         }
+        bgl.baglanti().Close();
     }
 
     protected void KayitOl_Click(object sender, EventArgs e)
@@ -55,17 +56,20 @@ public partial class BiletAl : System.Web.UI.Page
         }
         else
         {
+            Random rastgele = new Random();
+            int sayi = rastgele.Next(1000);
             string ad = kayitAd.Text;
             string soyad = kayitSoyad.Text;
             string mail = kayitMail.Text;
             string sifre = kayitSifre.Text;
-            string query = "INSERT INTO MusteriListesi(musteriAdi,musteriSoyadi,musteriMail,musteriSifre)" +
-                "VALUES (@ad,@soyad,@mail,@sifre)";
+            string query = "INSERT INTO MusteriListesi(musteriAdi,musteriSoyadi,musteriMail,musteriSifre,musteriKurtarmaKodu)" +
+                "VALUES (@ad,@soyad,@mail,@sifre,@musteriKurtarmaKodu)";
             SqlCommand kayitet = new SqlCommand(query, bgl.baglanti());
             kayitet.Parameters.AddWithValue("@ad", ad);
             kayitet.Parameters.AddWithValue("@soyad", soyad);
             kayitet.Parameters.AddWithValue("@mail", mail);
             kayitet.Parameters.AddWithValue("@sifre", sifre);
+            kayitet.Parameters.AddWithValue("@musteriKurtarmaKodu", sayi);
             kayitet.ExecuteNonQuery();
             lblMesaj.Text = "Başarıyla kayıt oldunuz.";
             bgl.baglanti().Close();
@@ -80,15 +84,22 @@ public partial class BiletAl : System.Web.UI.Page
 
     protected void btnGirisYap_Click(object sender, EventArgs e)
     {
+        lblMesaj.Text = "";
         string denenenmail = DenenenMail.Text;
         string denenensifre = DenenenSifre.Text;
         SqlCommand verilericek = new SqlCommand("SELECT musteriMail,musteriSifre from MusteriListesi where musteriMail='" + DenenenMail.Text + "'", bgl.baglanti());
         SqlDataReader kontrolet = verilericek.ExecuteReader();
-        if (kontrolet.Read())
+        if (DenenenMail.Text == "" || DenenenSifre.Text == "")
+        {
+            lblMesaj2.Text = "Tüm alanları doldurunuz.";
+            bgl.baglanti().Close();
+        }
+        else if (kontrolet.Read())
         {
             if (denenenmail == kontrolet["musteriMail"].ToString() && denenensifre == kontrolet["musteriSifre"].ToString())
             {
-                lblMesaj2.Text = "Başarıyla giriş yaptınız.";
+                Response.Redirect("MusteriPanel.aspx?mail="+denenenmail+"");
+                bgl.baglanti().Close();
             }
             else
             {
@@ -99,7 +110,6 @@ public partial class BiletAl : System.Web.UI.Page
         {
             lblMesaj2.Text = "Mail adresiniz veya şifreniz yanlış.";
         }
-        DenenenMail.Text = "";
         DenenenSifre.Text = "";
         bgl.baglanti().Close();
     }
