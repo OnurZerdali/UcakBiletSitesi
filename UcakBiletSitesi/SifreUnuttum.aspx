@@ -24,7 +24,7 @@
 
     <style>
         body {
-            background-color: #F0F0F0;
+            background-color: #2B2A30;
         }
 
         #slider {
@@ -109,7 +109,6 @@
                                 &nbsp;<br />
                                 <asp:Button ID="SiteyeGit" style="margin-left: 5rem; margin-top: 1rem;" runat="server" Text="Giriş sayfasına git !" Height="48px" Width="235px" OnClick="SiteyeGit_Click"/>
                             </div>
-                                
                         </div>
                     </div>
                 </div>

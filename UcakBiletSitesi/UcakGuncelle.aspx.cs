@@ -5,8 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Data;
+using System.Text;
 
-public partial class MusteriPanel : System.Web.UI.Page
+public partial class UcakGuncelle : System.Web.UI.Page
 {
     BaglantiSinifi bgl = new BaglantiSinifi();
     protected void Page_Load(object sender, EventArgs e)
@@ -39,37 +41,45 @@ public partial class MusteriPanel : System.Web.UI.Page
             lblyolcu.Text = yolcu["MusteriSayisi"].ToString();
         }
         bgl.baglanti().Close();
-        musterino.Visible = false;
-        lblmail.Visible = false;
-        lblmail.Text = Request.QueryString["mail"];
-        SqlCommand musterivericek = new SqlCommand("SELECT * from MusteriListesi where musteriMail='" + lblmail.Text + "'", bgl.baglanti());
-        SqlDataReader musteribilgi = musterivericek.ExecuteReader();
-        if (musteribilgi.Read())
+        lblucakNo.Text = Request.QueryString["ucakno"];
+        SqlCommand ucusvericek = new SqlCommand("select * from UcakListesi where ucakNo="+ lblucakNo.Text, bgl.baglanti());
+        SqlDataReader ucusveriyazdir = ucusvericek.ExecuteReader();
+        if (ucusveriyazdir.Read())
         {
-            musterino.Text = musteribilgi["musteriNo"].ToString();
-            musteriadsoyad.Text = musteribilgi["musteriAdi"].ToString() +" " + musteribilgi["musteriSoyadi"].ToString();
+            lblucakkapasite.Text = ucusveriyazdir["kapasite"].ToString();
         }
         bgl.baglanti().Close();
-        
+
     }
 
-    protected void Bilgilerim_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("Bilgilerim.aspx?musterino=" + musterino.Text + "");
-    }
 
-    protected void Biletlerim_Click(object sender, EventArgs e)
+    protected void Guncelle_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Biletlerim.aspx?musterino=" + musterino.Text + "");
-    }
-
-    protected void BiletSatinAl_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("BiletSatinAl.aspx?musterino=" + musterino.Text + "");
-    }
-
-    protected void Cikisyap_Click(object sender, EventArgs e)
-    {
-        Response.Redirect("BiletAl.aspx?musterino=" + musterino.Text + "");
+        if (txtHakkinda.Text == "")
+        {
+            lblMesaj.Text = "Tüm alanları doldurunuz.";
+        }
+        else
+        {
+            SqlCommand sorgu = new SqlCommand("SELECT * from UcakListesi where ucakNo=" + lblucakNo.Text, bgl.baglanti());
+            SqlDataReader nokontrol = sorgu.ExecuteReader();
+            if (nokontrol.Read())
+            {
+                string hakkinda = txtHakkinda.Text;
+                string guncellesorgu = "Update UcakListesi set ucakHakkinda=@hakkinda where ucakNo=" + lblucakNo.Text;
+                SqlCommand guncelle = new SqlCommand(guncellesorgu, bgl.baglanti());
+                guncelle.Parameters.AddWithValue("@hakkinda", hakkinda);
+                guncelle.ExecuteNonQuery();
+                bgl.baglanti().Close();
+                txtHakkinda.Text = "";
+                lblMesaj.Text = "Başarıyla uçuş bilgilerini değiştirdiniz.";
+            }
+            else
+            {
+                lblMesaj.Text = "Bir hata oluştu";
+                bgl.baglanti().Close();
+            }
+            bgl.baglanti().Close();
+        }
     }
 }

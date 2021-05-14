@@ -24,7 +24,7 @@
 
     <style>
         body {
-            background-color: #F0F0F0;
+            background-color: #2B2A30;
         }
 
         #slider {
@@ -125,7 +125,7 @@
                             </div>
                              &nbsp;<br />
                             <div class="konteynir">
-                                <asp:Label ID="Label8" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Şifreniz:&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="DenenenSifre" runat="server"></asp:TextBox>
+                                <asp:Label ID="Label8" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Şifreniz:&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="DenenenSifre" runat="server" type="password"></asp:TextBox>
                             </div>
                              &nbsp;<br />
                             <div class="konteynir">

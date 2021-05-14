@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MusteriPanel.aspx.cs" Inherits="MusteriPanel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="BilgiDuzenle.aspx.cs" Inherits="BilgiDuzenle" %>
 
 <!DOCTYPE html>
 
@@ -76,7 +76,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="konteynir" style="margin-left: 5rem; margin-top: 5rem;">
+                        <div class="konteynir" style="margin-left: 5rem; margin-top: 13rem;">
                             <asp:Button ID="Bilgilerim" runat="server" Text="BİLGİLERİM" Height="87px" Width="356px" OnClick="Bilgilerim_Click" />
                         </div>
                         <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
@@ -94,16 +94,48 @@
                          <div class="konteynir">
                             <h1> <asp:Label ID="musterino" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
                         </div>
+
                     </div>
                     <div class="col-md-6">
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1><a style="color:#ffffff">Hoş geldiniz</a></h1>
-                        </div>
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1> <asp:Label ID="musteriadsoyad" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
-                        </div>
-                        <div class="kart">
-                            <img src="img/logo.png" alt="Avatar" style="width: 100%">
+                        <div class="konteynir" style="margin-left: 5rem; margin-top: 5rem;">
+                            <h1><b class="" style="color: white;">BİLGİLERİNİZ</b></h1>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label7" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Müşteri numaranız: &nbsp;"></asp:Label><asp:Label ID="lblmusteriNo" Font-Size="20pt" ForeColor="#999999" runat="server" Text="asd"></asp:Label>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label8" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Adınız:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"></asp:Label><asp:Label ID="lblmusteriAd" Font-Size="20pt" ForeColor="#999999" runat="server" Text="sad"></asp:Label>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label1" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Soyadınız: &nbsp;&emsp;&emsp;&emsp;&emsp;"></asp:Label><asp:Label ID="lblmusteriSoyad" Font-Size="20pt" ForeColor="#999999" runat="server" Text="sada"></asp:Label>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label2" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Mail adresiniz:&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="txtMail" runat="server"></asp:TextBox>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label3" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Şifreniz:&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="txtSifre" type="password" runat="server"></asp:TextBox>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label5" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Şifreniz tekrar:&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="txtSifreTekrar" type="password" runat="server"></asp:TextBox>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label4" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Kurtarma kodunuz:&emsp;"></asp:Label><asp:Label ID="lblkurtarmaKodu" Font-Size="20pt" ForeColor="#999999" runat="server" Text="sada"></asp:Label>
+                            </div>
+                             &nbsp;<br />
+                            <div class="konteynir" style="margin-left:10rem; margin-top:3rem;">
+                                <asp:Button ID="BilgiGuncelle" runat="server" Height="67px" Width="256px" Text="Bilgilerimi Güncelle" OnClick="BilgiGuncelle_Click" />
+                            </div>
+                            &nbsp;<br />
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="lblMesaj" Font-Size="20pt" ForeColor="#999999" runat="server" Text="*** Lütfen kurtarma kodunuzu kaydediniz.***"></asp:Label>
+                            </div>
                         </div>
                     </div>
                 </div>

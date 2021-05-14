@@ -5,8 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Data;
+using System.Text;
 
-public partial class MusteriPanel : System.Web.UI.Page
+public partial class AdminPanel : System.Web.UI.Page
 {
     BaglantiSinifi bgl = new BaglantiSinifi();
     protected void Page_Load(object sender, EventArgs e)
@@ -39,37 +41,26 @@ public partial class MusteriPanel : System.Web.UI.Page
             lblyolcu.Text = yolcu["MusteriSayisi"].ToString();
         }
         bgl.baglanti().Close();
-        musterino.Visible = false;
-        lblmail.Visible = false;
-        lblmail.Text = Request.QueryString["mail"];
-        SqlCommand musterivericek = new SqlCommand("SELECT * from MusteriListesi where musteriMail='" + lblmail.Text + "'", bgl.baglanti());
-        SqlDataReader musteribilgi = musterivericek.ExecuteReader();
-        if (musteribilgi.Read())
-        {
-            musterino.Text = musteribilgi["musteriNo"].ToString();
-            musteriadsoyad.Text = musteribilgi["musteriAdi"].ToString() +" " + musteribilgi["musteriSoyadi"].ToString();
-        }
-        bgl.baglanti().Close();
-        
     }
 
-    protected void Bilgilerim_Click(object sender, EventArgs e)
+    protected void Uye_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Bilgilerim.aspx?musterino=" + musterino.Text + "");
+        Response.Redirect("Uye.aspx");
     }
 
-    protected void Biletlerim_Click(object sender, EventArgs e)
+    protected void Ucuslar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Biletlerim.aspx?musterino=" + musterino.Text + "");
+        Response.Redirect("Ucuslar.aspx");
     }
 
-    protected void BiletSatinAl_Click(object sender, EventArgs e)
+    protected void Ucaklar_Click(object sender, EventArgs e)
     {
-        Response.Redirect("BiletSatinAl.aspx?musterino=" + musterino.Text + "");
+        Response.Redirect("Ucaklar.aspx");
     }
 
     protected void Cikisyap_Click(object sender, EventArgs e)
     {
-        Response.Redirect("BiletAl.aspx?musterino=" + musterino.Text + "");
+        Response.Redirect("BiletAl.aspx");
     }
+  
 }

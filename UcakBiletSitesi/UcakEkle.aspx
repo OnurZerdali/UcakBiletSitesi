@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MusteriPanel.aspx.cs" Inherits="MusteriPanel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="UcakEkle.aspx.cs" Inherits="UcakEkle" %>
 
 <!DOCTYPE html>
 
@@ -70,43 +70,69 @@
                 <img src="imgucaklar/ucak5.jpg" /></a>
         </div>
 
+        <div class="content-links responsive">
+            <a href="#" class="header-icon">
+                <i class="fas fa-bars"></i>
+            </a>
 
+            <div class="display" style="background-color: #2B2A30">
 
-        <div class="" style="background-color: #2B2A30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="konteynir" style="margin-left: 5rem; margin-top: 5rem;">
-                            <asp:Button ID="Bilgilerim" runat="server" Text="BİLGİLERİM" Height="87px" Width="356px" OnClick="Bilgilerim_Click" />
-                        </div>
-                        <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
-                            <asp:Button ID="Biletler" runat="server" Text="SATIN ALDIĞIM BİLETLER" Height="87px" Width="356px" OnClick="Biletlerim_Click" />
-                        </div>
-                        <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
-                            <asp:Button ID="Biletal" runat="server" Text="BİLET AL" Height="87px" Width="356px" OnClick="BiletSatinAl_Click" />
-                        </div>
-                        <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
-                            <asp:Button ID="Cikisyap" runat="server" Text="ÇIKIŞ YAP" Height="87px" Width="356px" OnClick="Cikisyap_Click" />
-                        </div>
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1> <asp:Label ID="lblmail" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
-                        </div>
-                         <div class="konteynir">
-                            <h1> <asp:Label ID="musterino" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1><a style="color:#ffffff">Hoş geldiniz</a></h1>
-                        </div>
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1> <asp:Label ID="musteriadsoyad" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
-                        </div>
-                        <div class="kart">
-                            <img src="img/logo.png" alt="Avatar" style="width: 100%">
-                        </div>
-                    </div>
+                <b><a href="Uye.aspx" class="" style="color: white">TÜM ÜYELER</a></b>
+                <b><a href="Ucuslar.aspx" class="" style="color: white">UÇUŞLAR</a></b>
+                <b><a href="Ucaklar.aspx" class="" style="color: white">UÇAKLAR</a></b>
+                <b><a href="BiletAl.aspx" class="" style="color: white">ÇIKIŞ YAP</a></b>
+            </div>
+        </div>
+
+        <div class="content-links responsive" style="background-color: #2B2A30">
+            <h1 style="color: white">UÇAKLAR</h1>
+        </div>
+        <div class="" style="background-color: #fff">
+            <asp:Panel ID="Panel1" runat="server">
+            </asp:Panel>
+        </div>
+        <div class="content-links responsive" style="background-color: #2B2A30">
+            <h1 style="color: white">UÇAK EKLE</h1>
+            <asp:Label ID="Label4" runat="server" style="color:white" Text="(Uçak numarasının yukarıdaki tablodakilerle eşleşmemesine dikkat ediniz.)"></asp:Label>
+        </div>
+        <div class="content-links responsive">
+            <div class="row">
+                &nbsp;<br />
+                <div class="konteynir">
+                    <asp:Label ID="Label7" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Uçak numarası:&nbsp;&nbsp;"></asp:Label><asp:TextBox ID="txtucakNo" runat="server"></asp:TextBox>
                 </div>
+                &nbsp;<br />
+                <div class="konteynir">
+                    <asp:Label ID="Label8" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Kapasite: &nbsp;&emsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="txtKapasite" runat="server"></asp:TextBox>
+                </div>
+                &nbsp;<br />
+                <div class="konteynir">
+                    <asp:Label ID="Label1" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Hakkında: &emsp;&emsp;&emsp;"></asp:Label><asp:TextBox ID="txtHakkinda" runat="server"></asp:TextBox>
+                </div>
+                &nbsp;<br />
+                &nbsp;<br />
+                <div>
+                    <asp:Button ID="ucakEkle" runat="server" Height="67px" Width="256px" Text="Uçak Ekle" OnClick="ucakEkle_Click" />
+                </div>
+                &nbsp;<br />
+                &nbsp;<br />
+                <div class="konteynir">
+                    <asp:Label ID="lblMesaj" Font-Size="20pt" ForeColor="#999999" runat="server" Text=""></asp:Label>
+                </div>
+            </div>
+        </div>
+         &nbsp;<br />
+        <div class="content-links responsive">
+            <a href="#" class="header-icon">
+                <i class="fas fa-bars"></i>
+            </a>
+
+            <div class="display" style="background-color: #2B2A30">
+
+                <b><a href="Uye.aspx" class="" style="color: white">TÜM ÜYELER</a></b>
+                <b><a href="Ucuslar.aspx" class="" style="color: white">UÇUŞLAR</a></b>
+                <b><a href="Ucaklar.aspx" class="" style="color: white">UÇAKLAR</a></b>
+                <b><a href="BiletAl.aspx" class="" style="color: white">ÇIKIŞ YAP</a></b>
             </div>
         </div>
         <div class="" style="background-color: #2B2A30">

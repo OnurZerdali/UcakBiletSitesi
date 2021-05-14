@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 
-public partial class BiletAl : System.Web.UI.Page
+public partial class MusteriEkle : System.Web.UI.Page
 {
     BaglantiSinifi bgl = new BaglantiSinifi();
     protected void Page_Load(object sender, EventArgs e)
@@ -41,21 +41,22 @@ public partial class BiletAl : System.Web.UI.Page
         bgl.baglanti().Close();
     }
 
-    protected void KayitOl_Click(object sender, EventArgs e)
+
+    protected void musteriEkle_Click(object sender, EventArgs e)
     {
-        SqlCommand mailadresicek = new SqlCommand("SELECT (musteriMail) from MusteriListesi where musteriMail='"+kayitMail.Text+"'", bgl.baglanti());
+        SqlCommand mailadresicek = new SqlCommand("SELECT (musteriMail) from MusteriListesi where musteriMail='" + kayitMail.Text + "'", bgl.baglanti());
         SqlDataReader mailkontrol = mailadresicek.ExecuteReader();
         if (kayitAd.Text == "" || kayitSoyad.Text == "" || kayitMail.Text == "" || kayitSifre.Text == "" || kayitSifreTekrar.Text == "")
         {
             lblMesaj.Text = "Tüm alanları doldurunuz.";
             bgl.baglanti().Close();
         }
-        else if(kayitSifre.Text != kayitSifreTekrar.Text)
+        else if (kayitSifre.Text != kayitSifreTekrar.Text)
         {
             lblMesaj.Text = "Girdiğiniz şifreler aynı değil.";
             bgl.baglanti().Close();
         }
-        else if(mailkontrol.Read())
+        else if (mailkontrol.Read())
         {
             lblMesaj.Text = "Bu mail adresi ile hesap oluşturulmuş durumda.";
             bgl.baglanti().Close();
@@ -85,40 +86,6 @@ public partial class BiletAl : System.Web.UI.Page
             kayitSifre.Text = "";
             kayitSifreTekrar.Text = "";
         }
-
-    }
-
-    protected void btnGirisYap_Click(object sender, EventArgs e)
-    {
-        lblMesaj.Text = "";
-        string denenenmail = DenenenMail.Text;
-        string denenensifre = DenenenSifre.Text;
-        SqlCommand verilericek = new SqlCommand("SELECT musteriMail,musteriSifre from MusteriListesi where musteriMail='" + DenenenMail.Text + "'", bgl.baglanti());
-        SqlDataReader kontrolet = verilericek.ExecuteReader();
-        if (DenenenMail.Text == "" || DenenenSifre.Text == "")
-        {
-            lblMesaj2.Text = "Tüm alanları doldurunuz.";
-            bgl.baglanti().Close();
-        }
-        else if (kontrolet.Read())
-        {
-            if (denenenmail == kontrolet["musteriMail"].ToString() && denenensifre == kontrolet["musteriSifre"].ToString())
-            {
-                Response.Redirect("MusteriPanel.aspx?mail="+denenenmail+"");
-                bgl.baglanti().Close();
-            }
-            else
-            {
-                lblMesaj2.Text = "Mail adresiniz veya şifreniz yanlış.";
-                bgl.baglanti().Close();
-            }
-        }
-        else
-        {
-            lblMesaj2.Text = "Mail adresiniz veya şifreniz yanlış.";
-            bgl.baglanti().Close();
-        }
-        DenenenSifre.Text = "";
         bgl.baglanti().Close();
     }
 }

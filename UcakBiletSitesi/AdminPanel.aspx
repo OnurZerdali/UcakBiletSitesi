@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MusteriPanel.aspx.cs" Inherits="MusteriPanel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminPanel.aspx.cs" Inherits="AdminPanel" %>
 
 <!DOCTYPE html>
 
@@ -31,6 +31,12 @@
             width: 500px;
             height: 300px;
         }
+        .auto-style1 {
+            width: 135px;
+        }
+        .auto-style2 {
+            width: 159px;
+        }
     </style>
 
 </head>
@@ -55,8 +61,6 @@
         </header>
 
 
-        </div>
-
         <div id="slider">
             <a href="#">
                 <img src="imgucaklar/ucak1.jpg" alt="Şirketimize ait uçaklardan kareler" /></a>
@@ -77,13 +81,13 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="konteynir" style="margin-left: 5rem; margin-top: 5rem;">
-                            <asp:Button ID="Bilgilerim" runat="server" Text="BİLGİLERİM" Height="87px" Width="356px" OnClick="Bilgilerim_Click" />
+                            <asp:Button ID="Uyeler" runat="server" Text="ÜYELER" Height="87px" Width="356px" OnClick="Uye_Click" />
                         </div>
                         <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
-                            <asp:Button ID="Biletler" runat="server" Text="SATIN ALDIĞIM BİLETLER" Height="87px" Width="356px" OnClick="Biletlerim_Click" />
+                            <asp:Button ID="Ucuslar" runat="server" Text="UÇUŞLAR" Height="87px" Width="356px" OnClick="Ucuslar_Click" />
                         </div>
                         <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
-                            <asp:Button ID="Biletal" runat="server" Text="BİLET AL" Height="87px" Width="356px" OnClick="BiletSatinAl_Click" />
+                            <asp:Button ID="Ucaklar" runat="server" Text="UÇAKLAR" Height="87px" Width="356px" OnClick="Ucaklar_Click" />
                         </div>
                         <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
                             <asp:Button ID="Cikisyap" runat="server" Text="ÇIKIŞ YAP" Height="87px" Width="356px" OnClick="Cikisyap_Click" />
@@ -96,11 +100,8 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1><a style="color:#ffffff">Hoş geldiniz</a></h1>
-                        </div>
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1> <asp:Label ID="musteriadsoyad" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
+                        <div class="konteynir" style="margin-left: 10rem; margin-top: 5rem;">
+                            <h1><a style="color:#ffffff">Yönetici paneline hoşgeldiniz</a></h1>
                         </div>
                         <div class="kart">
                             <img src="img/logo.png" alt="Avatar" style="width: 100%">
@@ -108,13 +109,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="" style="background-color: #2B2A30">
-            &nbsp;<br />
-            &nbsp;<br />
-            &nbsp;<br />
-            &nbsp;<br />
-            &nbsp;<br />
         </div>
 
 
@@ -202,7 +196,11 @@
     </form>
 
 
-
+    <script>
+        function tableClick(ucusNo) {
+            alert(ucusNo);
+        }
+    </script>
 
 </body>
 

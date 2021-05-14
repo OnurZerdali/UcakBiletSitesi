@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="MusteriPanel.aspx.cs" Inherits="MusteriPanel" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Bilgilerim.aspx.cs" Inherits="Bilgilerim" %>
 
 <!DOCTYPE html>
 
@@ -76,8 +76,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="konteynir" style="margin-left: 5rem; margin-top: 5rem;">
-                            <asp:Button ID="Bilgilerim" runat="server" Text="BİLGİLERİM" Height="87px" Width="356px" OnClick="Bilgilerim_Click" />
+                        <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
+                            <asp:Label ID="lblMesaj2" Font-Size="20pt" ForeColor="#999999" runat="server" Text=": &nbsp;"></asp:Label>
+                        </div>
+                        <div class="konteynir" style="margin-left: 5rem; margin-top: 2rem;">
+                            <asp:Button ID="Anasayfa" runat="server" Text="Anasayfaya Dön" Height="47px" Width="156px" OnClick="Anasayfa_Click"/>&emsp;&emsp;<asp:Button ID="GiriseDon" runat="server" Text="Giriş sayfasına dön" Height="47px" Width="156px" OnClick="GiriseDon_Click"/>
+                        </div>
+                        <div class="konteynir" style="margin-left: 5rem; margin-top: 8rem;">
+                            <asp:Button ID="Bilgilerim1" runat="server" Text="BİLGİLERİM" Height="87px" Width="356px" OnClick="Bilgilerim_Click" />
                         </div>
                         <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
                             <asp:Button ID="Biletler" runat="server" Text="SATIN ALDIĞIM BİLETLER" Height="87px" Width="356px" OnClick="Biletlerim_Click" />
@@ -88,22 +94,46 @@
                         <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
                             <asp:Button ID="Cikisyap" runat="server" Text="ÇIKIŞ YAP" Height="87px" Width="356px" OnClick="Cikisyap_Click" />
                         </div>
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1> <asp:Label ID="lblmail" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
+                        <div class="konteynir" style="margin-left: 5rem; margin-top: 1rem;">
+                            <asp:Label ID="lblnotut" Font-Size="20pt" ForeColor="#999999" runat="server" Text=""></asp:Label>
                         </div>
-                         <div class="konteynir">
-                            <h1> <asp:Label ID="musterino" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
-                        </div>
+
                     </div>
                     <div class="col-md-6">
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1><a style="color:#ffffff">Hoş geldiniz</a></h1>
-                        </div>
-                        <div class="konteynir" style="margin-left: 15rem; margin-top: 5rem;">
-                            <h1> <asp:Label ID="musteriadsoyad" style="color:#ffffff" runat="server" Text=""></asp:Label> </h1>
-                        </div>
-                        <div class="kart">
-                            <img src="img/logo.png" alt="Avatar" style="width: 100%">
+                        <div class="konteynir" style="margin-left: 5rem; margin-top: 5rem;">
+                            <h1><b class="" style="color: white;">BİLGİLERİNİZ</b></h1>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label7" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Müşteri numaranız: &nbsp;"></asp:Label><asp:Label ID="lblmusteriNo" Font-Size="20pt" ForeColor="#999999" runat="server" Text="asd"></asp:Label>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label8" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Adınız:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;"></asp:Label><asp:Label ID="lblmusteriAd" Font-Size="20pt" ForeColor="#999999" runat="server" Text="sad"></asp:Label>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label1" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Soyadınız: &nbsp;&emsp;&emsp;&emsp;&emsp;"></asp:Label><asp:Label ID="lblmusteriSoyad" Font-Size="20pt" ForeColor="#999999" runat="server" Text="sada"></asp:Label>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label2" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Mail adresiniz:&emsp;&emsp;&emsp;"></asp:Label><asp:Label ID="lblmusteriMail" Font-Size="20pt" ForeColor="#999999" runat="server"></asp:Label>
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="Label4" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Kurtarma kodunuz:&emsp;"></asp:Label><asp:Label ID="lblkurtarmaKodu" Font-Size="20pt" ForeColor="#999999" runat="server" Text="sada"></asp:Label>
+                            </div>
+                            &nbsp;<br />
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Button ID="UyelikSil" Height="47px" Width="156px" runat="server" Text="Üyeliğimi Sil" OnClick="UyelikSil_Click" />&emsp;&emsp;<asp:Button ID="BilgiDegistir" runat="server" Text="Bilgilerimi Güncelle" Height="47px" Width="156px" OnClick="BilgiDegistir_Click" />
+                            </div>
+                            &nbsp;<br />
+                            <div class="konteynir">
+                                <asp:Label ID="lblMesaj" Font-Size="20pt" ForeColor="#999999" runat="server" Text="Lütfen kurtarma kodunuzu kaydediniz."></asp:Label>
+                            </div>
+                            <div class="konteynir">
+                                <asp:Button ID="Hayir" runat="server" Text="Hayır Silme" Height="47px" Width="156px" OnClick="Hayir_Click" />&emsp;&emsp;<asp:Button ID="Evet" runat="server" Text="Evet Sil" Height="47px" Width="156px" OnClick="Evet_Click" />
+                            </div>
                         </div>
                     </div>
                 </div>

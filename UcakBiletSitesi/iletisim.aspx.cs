@@ -17,18 +17,21 @@ public partial class iletisim : System.Web.UI.Page
         {
             lblucak.Text = ucaksayisi["UcakSayisi"].ToString();
         }
+        bgl.baglanti().Close();
         SqlCommand ucussayisicek = new SqlCommand("SELECT COUNT(ucusNo) AS UcusSayisi FROM UcusListesi", bgl.baglanti());
         SqlDataReader ucussayisi = ucussayisicek.ExecuteReader();
         if (ucussayisi.Read())
         {
             lblucus.Text = ucussayisi["UcusSayisi"].ToString();
         }
+        bgl.baglanti().Close();
         SqlCommand kapasitecek = new SqlCommand("SELECT Sum(kapasite) as Kapasite FROM UcakListesi", bgl.baglanti());
         SqlDataReader kapasiteveri = kapasitecek.ExecuteReader();
         if (kapasiteveri.Read())
         {
             lblkapasite.Text = kapasiteveri["Kapasite"].ToString();
         }
+        bgl.baglanti().Close();
         SqlCommand yolcusayisi = new SqlCommand("SELECT COUNT(musteriNo) AS MusteriSayisi FROM MusteriListesi", bgl.baglanti());
         SqlDataReader yolcu = yolcusayisi.ExecuteReader();
         if (yolcu.Read())
